@@ -10,7 +10,7 @@ pi:
   compact: 'yes'
 title: CoAP Traffic
 abbrev: CoAP Traffic
-date: 2016-04
+date: 2017-01-12
 author:
 - ins: A. Minaburo
   name: Ana Minaburo
@@ -86,13 +86,13 @@ Compression Objectives:
 * do not sent options because they are defined in the rule.
 
 * send value
-\*\*\* NOTE: The Mid may not be sent, since no acknowledgement is expected.
-Nevertheless
-several copies of the same message will not be detected by the receiver which
-will view
-them as several requests. This can be solved at L2 if the technology sends
-the frame with
-unique value.
+
+\*\*\* NOTE: The Mid may not be sent, since no acknowledgement is
+expected.  Nevertheless several copies of the same message will not be
+detected by the receiver which will view them as several requests.
+
+This can be solved at L2 if the technology sends the frame with unique
+value.
 
 
 ## Scenario 2 - CoAP POST without Acknowledgement to thing
@@ -449,7 +449,7 @@ Some simple scenarii where SCHC rules can be modified:
 * Network informs the thing of the IPv6 prefix
  {{Fig-iPATCH-example}} gives an example of a simple request where:
 
-* field-SID contains the SID value identifying the Target Value (1023 in {{Fig-generic-rule-sid}}  ),
+* field-SID contains the SID value identifying the Target Value (1023 in {{Fig-generic-rule-sid}}),
 
 * rule-id is the rule to be modified
 
@@ -505,8 +505,7 @@ The objective will be to sent on the radio link a message containing:
 * CBOR position to identify ESport : 0xPPPPPPPP (4 bytes)
 
 * CBOR port number value : 0xPPPP (2 bytes)
+
 Therefore 9 bytes are sent on the LPWAN radio link.
-
-
 
 --- back
