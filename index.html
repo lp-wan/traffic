@@ -301,7 +301,7 @@ address {
 
   <meta name="dct.creator" content="Minaburo, A. and L. Toutain" />
   <meta name="dct.identifier" content="urn:ietf:id:draft-toutain-lpwan-coap-traffic-latest" />
-  <meta name="dct.issued" scheme="ISO8601" content="2016-4" />
+  <meta name="dct.issued" scheme="ISO8601" content="2017-1-12" />
   <meta name="dct.abstract" content="This document describes different CoAP scenarios for the SCHC compression.  It goes from the simplest exchange without acknowledgments to a basic study of the CoMI traffic." />
   <meta name="description" content="This document describes different CoAP scenarios for the SCHC compression.  It goes from the simplest exchange without acknowledgments to a basic study of the CoMI traffic." />
 
@@ -325,12 +325,12 @@ address {
   <td class="right">L. Toutain</td>
 </tr>
 <tr>
-  <td class="left">Expires: October 3, 2016</td>
+  <td class="left">Expires: July 16, 2017</td>
   <td class="right">Institut Mines Telecom Atlantique</td>
 </tr>
 <tr>
   <td class="left"></td>
-  <td class="right">April 2016</td>
+  <td class="right">January 12, 2017</td>
 </tr>
 
     	
@@ -350,11 +350,11 @@ address {
 <p>This Internet-Draft is submitted in full conformance with the provisions of BCP 78 and BCP 79.</p>
 <p>Internet-Drafts are working documents of the Internet Engineering Task Force (IETF).  Note that other groups may also distribute working documents as Internet-Drafts.  The list of current Internet-Drafts is at http://datatracker.ietf.org/drafts/current/.</p>
 <p>Internet-Drafts are draft documents valid for a maximum of six months and may be updated, replaced, or obsoleted by other documents at any time.  It is inappropriate to use Internet-Drafts as reference material or to cite them other than as "work in progress."</p>
-<p>This Internet-Draft will expire on October 3, 2016.</p>
+<p>This Internet-Draft will expire on July 16, 2017.</p>
 <h1 id="rfc.copyrightnotice">
   <a href="#rfc.copyrightnotice">Copyright Notice</a>
 </h1>
-<p>Copyright (c) 2016 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
+<p>Copyright (c) 2017 IETF Trust and the persons identified as the document authors.  All rights reserved.</p>
 <p>This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relating to IETF Documents (http://trustee.ietf.org/license-info) in effect on the date of publication of this document.  Please review these documents carefully, as they describe your rights and restrictions with respect to this document.  Code Components extracted from this document must include Simplified BSD License text as described in Section 4.e of the Trust Legal Provisions and are provided without warranty as described in the Simplified BSD License.</p>
 <h1 id="rfc.section.1"><a href="#rfc.section.1">1.</a> <a href="#introduction" id="introduction">Introduction</a></h1>
 <p id="rfc.section.1.p.1">This document describes different CoAP scenarios for the SCHC compression.  It goes from the simplest exchange without acknowledgments to a basic study of the CoMI traffic.  These scenarios currently do not cover cases where encryption is used (COSE, OSCOAP,&#8230;).</p>
@@ -386,8 +386,10 @@ address {
   <li>do not send version, type, token length, code because they are defined in the rule.</li>
   <li>compress Message ID and Token.</li>
   <li>do not sent options because they are defined in the rule.</li>
-  <li>send value *** NOTE: The Mid may not be sent, since no acknowledgement is expected.  Nevertheless several copies of the same message will not be detected by the receiver which will view them as several requests. This can be solved at L2 if the technology sends the frame with unique value.</li>
+  <li>send value</li>
 </ul>
+<p id="rfc.section.2.1.p.4">*** NOTE: The Mid may not be sent, since no acknowledgement is expected.  Nevertheless several copies of the same message will not be detected by the receiver which will view them as several requests.</p>
+<p id="rfc.section.2.1.p.5">This can be solved at L2 if the technology sends the frame with unique value.</p>
 <h1 id="rfc.section.2.2"><a href="#rfc.section.2.2">2.2.</a> <a href="#scenario-2-coap-post-without-acknowledgement-to-thing" id="scenario-2-coap-post-without-acknowledgement-to-thing">Scenario 2 - CoAP POST without Acknowledgement to thing</a></h1>
 <p id="rfc.section.2.2.p.1">Same as <a href="#FromThingPOSTnoAck">Section 2.1</a> but request comes from network to thing.  Selected values for Mid, token need to be control to allow a better compression rate. A CoAP proxy is need to normalize these values.</p>
 <div id="rfc.figure.2"/>
@@ -637,7 +639,7 @@ Number of SIDs assigned : 25
   <li>a thing selects a dynamic port number for a flow and informs the other end of this value.</li>
   <li>a thing informs the other end of the destination IPv6 address.</li>
   <li>Network informs the thing of the IPv6 prefix <a href="#Fig-iPATCH-example">Figure 11</a> gives an example of a simple request where:</li>
-  <li>field-SID contains the SID value identifying the Target Value (1023 in <a href="#Fig-generic-rule-sid">Figure 10</a>  ),</li>
+  <li>field-SID contains the SID value identifying the Target Value (1023 in <a href="#Fig-generic-rule-sid">Figure 10</a>),</li>
   <li>rule-id is the rule to be modified</li>
   <li>field-pos is the value indicating that it is respectively a ESport, or a prefix</li>
 </ul>
@@ -679,8 +681,9 @@ iPATCH /c Content-Format(application/YANG-patch+cbor)
   <li>CoAP header : 0xXX (1 byte)</li>
   <li>CBOR Rule-id : 0x0A (10 in the example) (1 byte)</li>
   <li>CBOR position to identify ESport : 0xPPPPPPPP (4 bytes)</li>
-  <li>CBOR port number value : 0xPPPP (2 bytes) Therefore 9 bytes are sent on the LPWAN radio link.</li>
+  <li>CBOR port number value : 0xPPPP (2 bytes)</li>
 </ul>
+<p id="rfc.section.4.6.p.9">Therefore 9 bytes are sent on the LPWAN radio link.</p>
 <h1 id="rfc.references"><a href="#rfc.references">5.</a> Normative References</h1>
 <table>
   <tbody>

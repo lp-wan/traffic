@@ -5,8 +5,8 @@
 Network Working Group                                        A. Minaburo
 Internet-Draft                                                    Acklio
 Intended status: Informational                                L. Toutain
-Expires: October 3, 2016               Institut Mines Telecom Atlantique
-                                                              April 2016
+Expires: July 16, 2017                 Institut Mines Telecom Atlantique
+                                                        January 12, 2017
 
 
                               CoAP Traffic
@@ -33,11 +33,11 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on October 3, 2016.
+   This Internet-Draft will expire on July 16, 2017.
 
 Copyright Notice
 
-   Copyright (c) 2016 IETF Trust and the persons identified as the
+   Copyright (c) 2017 IETF Trust and the persons identified as the
    document authors.  All rights reserved.
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Minaburo & Toutain       Expires October 3, 2016                [Page 1]
+Minaburo & Toutain        Expires July 16, 2017                 [Page 1]
 
-Internet-Draft                CoAP Traffic                    April 2016
+Internet-Draft                CoAP Traffic                  January 2017
 
 
 1.  Introduction
@@ -99,20 +99,23 @@ Internet-Draft                CoAP Traffic                    April 2016
 
    o  do not sent options because they are defined in the rule.
 
-   o  send value *** NOTE: The Mid may not be sent, since no
-      acknowledgement is expected.  Nevertheless several copies of the
-      same message will not be detected by the receiver which will view
-      them as several requests.  This can be solved at L2 if the
-      technology sends the frame with unique value.
+   o  send value
+
+   *** NOTE: The Mid may not be sent, since no acknowledgement is
+   expected.  Nevertheless several copies of the same message will not
+   be detected by the receiver which will view them as several requests.
 
 
 
 
 
-Minaburo & Toutain       Expires October 3, 2016                [Page 2]
+Minaburo & Toutain        Expires July 16, 2017                 [Page 2]
 
-Internet-Draft                CoAP Traffic                    April 2016
+Internet-Draft                CoAP Traffic                  January 2017
 
+
+   This can be solved at L2 if the technology sends the frame with
+   unique value.
 
 2.2.  Scenario 2 - CoAP POST without Acknowledgement to thing
 
@@ -162,12 +165,9 @@ Internet-Draft                CoAP Traffic                    April 2016
 
 
 
-
-
-
-Minaburo & Toutain       Expires October 3, 2016                [Page 3]
+Minaburo & Toutain        Expires July 16, 2017                 [Page 3]
 
-Internet-Draft                CoAP Traffic                    April 2016
+Internet-Draft                CoAP Traffic                  January 2017
 
 
  thing                          LPWAN SCHC                   CoAP Server
@@ -221,9 +221,9 @@ Internet-Draft                CoAP Traffic                    April 2016
 
 
 
-Minaburo & Toutain       Expires October 3, 2016                [Page 4]
+Minaburo & Toutain        Expires July 16, 2017                 [Page 4]
 
-Internet-Draft                CoAP Traffic                    April 2016
+Internet-Draft                CoAP Traffic                  January 2017
 
 
  thing                          LPWAN SCHC                   CoAP Server
@@ -277,9 +277,9 @@ Internet-Draft                CoAP Traffic                    April 2016
 
 
 
-Minaburo & Toutain       Expires October 3, 2016                [Page 5]
+Minaburo & Toutain        Expires July 16, 2017                 [Page 5]
 
-Internet-Draft                CoAP Traffic                    April 2016
+Internet-Draft                CoAP Traffic                  January 2017
 
 
 thing                          LPWAN SCHC                     CoAP Server
@@ -333,9 +333,9 @@ thing                          LPWAN SCHC                     CoAP Server
 
 
 
-Minaburo & Toutain       Expires October 3, 2016                [Page 6]
+Minaburo & Toutain        Expires July 16, 2017                 [Page 6]
 
-Internet-Draft                CoAP Traffic                    April 2016
+Internet-Draft                CoAP Traffic                  January 2017
 
 
 4.1.  GET
@@ -389,9 +389,9 @@ Internet-Draft                CoAP Traffic                    April 2016
 
 
 
-Minaburo & Toutain       Expires October 3, 2016                [Page 7]
+Minaburo & Toutain        Expires July 16, 2017                 [Page 7]
 
-Internet-Draft                CoAP Traffic                    April 2016
+Internet-Draft                CoAP Traffic                  January 2017
 
 
    confirmation).  POST URI contains only the SID value and PUT can add
@@ -445,9 +445,9 @@ Internet-Draft                CoAP Traffic                    April 2016
 
 
 
-Minaburo & Toutain       Expires October 3, 2016                [Page 8]
+Minaburo & Toutain        Expires July 16, 2017                 [Page 8]
 
-Internet-Draft                CoAP Traffic                    April 2016
+Internet-Draft                CoAP Traffic                  January 2017
 
 
 module: ietf-lpwan-compression
@@ -501,9 +501,9 @@ module: ietf-lpwan-compression
 
 
 
-Minaburo & Toutain       Expires October 3, 2016                [Page 9]
+Minaburo & Toutain        Expires July 16, 2017                 [Page 9]
 
-Internet-Draft                CoAP Traffic                    April 2016
+Internet-Draft                CoAP Traffic                  January 2017
 
 
 SID        Assigned to
@@ -552,14 +552,14 @@ Number of SIDs assigned : 25
       example of a simple request where:
 
    o  field-SID contains the SID value identifying the Target Value
-      (1023 in Figure 10 ),
+      (1023 in Figure 10),
 
 
 
 
-Minaburo & Toutain       Expires October 3, 2016               [Page 10]
+Minaburo & Toutain        Expires July 16, 2017                [Page 10]
 
-Internet-Draft                CoAP Traffic                    April 2016
+Internet-Draft                CoAP Traffic                  January 2017
 
 
    o  rule-id is the rule to be modified
@@ -613,13 +613,14 @@ Internet-Draft                CoAP Traffic                    April 2016
 
 
 
-Minaburo & Toutain       Expires October 3, 2016               [Page 11]
+Minaburo & Toutain        Expires July 16, 2017                [Page 11]
 
-Internet-Draft                CoAP Traffic                    April 2016
+Internet-Draft                CoAP Traffic                  January 2017
 
 
-   o  CBOR port number value : 0xPPPP (2 bytes) Therefore 9 bytes are
-      sent on the LPWAN radio link.
+   o  CBOR port number value : 0xPPPP (2 bytes)
+
+   Therefore 9 bytes are sent on the LPWAN radio link.
 
 5.  Normative References
 
@@ -668,5 +669,4 @@ Authors' Addresses
 
 
 
-
-Minaburo & Toutain       Expires October 3, 2016               [Page 12]
+Minaburo & Toutain        Expires July 16, 2017                [Page 12]
