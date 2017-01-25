@@ -2,7 +2,7 @@
 
 This is the working area for the Individual internet-draft, "".
 
-* [Editor's copy](https://lp-wan.github.io/traffic/)
+* [Editor's copy](https://lp-wan.github.io/traffic/)    [![Build Status](https://travis-ci.org/lp-wan/coap-compression.svg?branch=master)](https://travis-ci.org/lp-wan/coap-compression)
 * [Individual Draft] (https://tools.ietf.org/html/draft-toutain-lpwan-coap-traffic)
 * [Compare Individual Draft and Editor's copy] (https://tools.ietf.org/rfcdiff?url1=https://tools.ietf.org/id/draft-toutain-lpwan-coap-traffic.txt&url2=https://lp-wan.github.io/traffic/draft-toutain-lpwan-coap-traffic.txt)
 
