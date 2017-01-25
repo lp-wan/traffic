@@ -548,12 +548,12 @@ Number of SIDs assigned : 25
 
    o  a thing informs the other end of the destination IPv6 address.
 
-   o  Network informs the thing of the IPv6 prefix Figure 11 gives an
-      example of a simple request where:
+   o  Network informs the thing of the IPv6 prefix
+
+   Figure 11 gives an example of a simple request where:
 
    o  field-SID contains the SID value identifying the Target Value
       (1023 in Figure 10),
-
 
 
 

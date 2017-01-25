@@ -638,7 +638,12 @@ Number of SIDs assigned : 25
 <ul>
   <li>a thing selects a dynamic port number for a flow and informs the other end of this value.</li>
   <li>a thing informs the other end of the destination IPv6 address.</li>
-  <li>Network informs the thing of the IPv6 prefix <a href="#Fig-iPATCH-example">Figure 11</a> gives an example of a simple request where:</li>
+  <li>Network informs the thing of the IPv6 prefix</li>
+</ul>
+<p><a href="#Fig-iPATCH-example">Figure 11</a> gives an example of a simple request where:</p>
+<p/>
+
+<ul>
   <li>field-SID contains the SID value identifying the Target Value (1023 in <a href="#Fig-generic-rule-sid">Figure 10</a>),</li>
   <li>rule-id is the rule to be modified</li>
   <li>field-pos is the value indicating that it is respectively a ESport, or a prefix</li>
@@ -653,7 +658,7 @@ iPATCH /c Content-Format(application/YANG-patch+cbor)
 
 </pre>
 <p class="figure">Figure 11: YANG definition of the IPv6 UDP compression</p>
-<p id="rfc.section.4.6.p.5">To set a port number for Rule 10 a CoMI iPTACH is sent. The rule 1 is used for that CoMI request and contains the Path, the content-format values and also the field-SID for Target Value (1023).</p>
+<p id="rfc.section.4.6.p.7">To set a port number for Rule 10 a CoMI iPTACH is sent. The rule 1 is used for that CoMI request and contains the Path, the content-format values and also the field-SID for Target Value (1023).</p>
 <div id="rfc.figure.12"/>
 <div id="Fig-CoAP-header-2"/>
 <pre>
@@ -672,8 +677,8 @@ iPATCH /c Content-Format(application/YANG-patch+cbor)
   * draft mandate a Confirmable message
 </pre>
 <p class="figure">Figure 12: CoAP Context to compress header with token</p>
-<p id="rfc.section.4.6.p.6">Where t defines the request type (0: CON, 1: ACK), CC defines the code (00: iPTACH, 01: 2.04, 10: ????, 11: ????). Message id is remapped in 2 bits which allows 4 messages  simultaneously in the air and Token to 3 bits which allows 8 simultaneous pending requests.</p>
-<p id="rfc.section.4.6.p.7">The objective will be to sent on the radio link a message containing:</p>
+<p id="rfc.section.4.6.p.8">Where t defines the request type (0: CON, 1: ACK), CC defines the code (00: iPTACH, 01: 2.04, 10: ????, 11: ????). Message id is remapped in 2 bits which allows 4 messages  simultaneously in the air and Token to 3 bits which allows 8 simultaneous pending requests.</p>
+<p id="rfc.section.4.6.p.9">The objective will be to sent on the radio link a message containing:</p>
 <p/>
 
 <ul>
@@ -683,7 +688,7 @@ iPATCH /c Content-Format(application/YANG-patch+cbor)
   <li>CBOR position to identify ESport : 0xPPPPPPPP (4 bytes)</li>
   <li>CBOR port number value : 0xPPPP (2 bytes)</li>
 </ul>
-<p id="rfc.section.4.6.p.9">Therefore 9 bytes are sent on the LPWAN radio link.</p>
+<p id="rfc.section.4.6.p.11">Therefore 9 bytes are sent on the LPWAN radio link.</p>
 <h1 id="rfc.references"><a href="#rfc.references">5.</a> Normative References</h1>
 <table>
   <tbody>
