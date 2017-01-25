@@ -447,7 +447,8 @@ Some simple scenarii where SCHC rules can be modified:
 * a thing informs the other end of the destination IPv6 address.
 
 * Network informs the thing of the IPv6 prefix
- {{Fig-iPATCH-example}} gives an example of a simple request where:
+
+{{Fig-iPATCH-example}} gives an example of a simple request where:
 
 * field-SID contains the SID value identifying the Target Value (1023 in {{Fig-generic-rule-sid}}),
 
